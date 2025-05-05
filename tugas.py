@@ -1,7 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox
 
-# Data aturan sistem pakar
 def rekomendasi_tanaman(tanah, cahaya, air):
     rules = {
         ("Lempung", "Tinggi", "Banyak"): "Padi, Jagung",
@@ -57,7 +56,6 @@ def rekomendasi_tanaman(tanah, cahaya, air):
 
     return rules.get((tanah, cahaya, air), "Belum ada rekomendasi untuk kombinasi ini.")
 
-# Fungsi untuk menangani tombol submit
 def submit():
     tanah = var_tanah.get()
     cahaya = var_cahaya.get()
@@ -70,7 +68,6 @@ def submit():
     hasil = rekomendasi_tanaman(tanah, cahaya, air)
     label_hasil.config(text=f"Rekomendasi Tanaman:\n{hasil}")
 
-# GUI
 root = tk.Tk()
 root.title("Sistem Pakar Rekomendasi Tanaman")
 root.geometry("400x400")
